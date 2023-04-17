@@ -5,15 +5,15 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     image: linuxserver/wikijs:latest
     container_name: wikijs
     restart: unless-stopped
     ports:
       - 3000:3000 # WEB UI
     volumes:
-      - /mnt/docker-volumes/wikijs/config:/config
-      - /mnt/docker-volumes/wikijs/data:/data
+      - /home/brent/wikijs/config:/config
+      - /home/brent/wikijs/data:/data
     links:
       - db
       
@@ -26,4 +26,4 @@ services:
     image: postgres:13.4-bullseye
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/wikijs/database:/var/lib/postgresql/data
+      - /home/brent/wikijs/database:/var/lib/postgresql/data

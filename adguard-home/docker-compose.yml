@@ -11,5 +11,5 @@ services:
       - 53:53/udp
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/adguard-home/work:/opt/adguardhome/work
-      - /mnt/docker-volumes/adguard-home/conf:/opt/adguardhome/conf
+      - /home/brent/adguard-home/work:/opt/adguardhome/work
+      - /home/brent/adguard-home/conf:/opt/adguardhome/conf

@@ -6,11 +6,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     hostname: papermerge
     image: linuxserver/papermerge:latest
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/papermerge/importer_dir:/mnt/media/importer_dir
-      - /mnt/docker-volumes/papermerge/config:/config
-      - /mnt/docker-volumes/papermerge/data:/data
+      - /home/brent/papermerge/importer_dir:/mnt/media/importer_dir
+      - /home/brent/papermerge/config:/config
+      - /home/brent/papermerge/data:/data

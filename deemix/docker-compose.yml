@@ -10,5 +10,5 @@ services:
     image: registry.gitlab.com/bockiii/deemix-docker:latest
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/deemix/config:/config
-      - /mnt/docker-volumes/deemix/downloads:/downloads
+      - /home/brent/deemix/config:/config
+      - /home/brent/deemix/downloads:/downloads

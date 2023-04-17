@@ -6,10 +6,10 @@ services:
     environment:
       - PUID=1000
       - PGID=100
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
       - SECRET_PATH=pwndrop # secret path your admin mgmt interface will be
     image: linuxserver/pwndrop:latest
     restart: unless-stopped
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /mnt/docker-volumes/pwndrop/config:/config
+      - /home/brent/pwndrop/config:/config

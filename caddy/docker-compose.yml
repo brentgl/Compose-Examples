@@ -5,11 +5,11 @@ services:
     container_name: caddy
     restart: unless-stopped
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - /mnt/docker-volumes/caddy/CaddyFile:/etc/caddy/Caddyfile
-      - /mnt/docker-volumes/caddy/data:/data
-      - /mnt/docker-volumes/caddy/config:/config
+      - /home/brent/caddy/CaddyFile:/etc/caddy/Caddyfile
+      - /home/brent/caddy/data:/data
+      - /home/brent/caddy/config:/config

@@ -9,13 +9,13 @@ services:
     environment:
       - USR_ID=1000 # user account id on the system
       - GRP_ID=1000 # group id on the system
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
       - DUPLICACY_WEB_VERSION=latest
     ports:
       - "3875:3875/tcp"
     volumes:
-      - /mnt/docker-volumes/duplicacy-web/config:/config
-      - /mnt/docker-volumes/duplicacy-web/logs:/logs
-      - /mnt/docker-volumes/duplicacy-web/cache:/cache
+      - /home/brent/duplicacy-web/config:/config
+      - /home/brent/duplicacy-web/logs:/logs
+      - /home/brent/duplicacy-web/cache:/cache
       - /path/to/my/data/dir1:/data/dir1:ro # 1st path to your data for backup
       - /path/to/my/data/dir2:/data/dir2:ro # 2nd path to your data for backup

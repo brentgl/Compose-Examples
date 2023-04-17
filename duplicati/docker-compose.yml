@@ -10,7 +10,7 @@ services:
     environment:
       - PUID=0
       - PGID=1000
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     hostname: duplicati
     image: linuxserver/duplicati:latest
     #labels:
@@ -23,6 +23,6 @@ services:
     #  - traefik.http.routers.duplicati.middlewares=local-ipwhitelist@file
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/duplicati/backups:/backups
-      - /mnt/docker-volumes/duplicati/config:/config
+      - /home/brent/duplicati/backups:/backups
+      - /home/brent/duplicati/config:/config
       - /path/to/my/data/to/backup:/source # change this

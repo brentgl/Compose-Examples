@@ -13,9 +13,9 @@ services:
       - REPLICA_PASSWORD=password2
       - CRON=*/30 * * * * # run every 30 minute; see https://crontab.guru/
       - RUNONSTART=true
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
       - PUID=1000
       - PGID=1000
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/adguard-home-sync:/config
+      - /home/brent/adguard-home-sync:/config

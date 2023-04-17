@@ -7,10 +7,10 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     volumes:
-      - /mnt/docker-volumes/nextcloud/config:/config
-      - /mnt/docker-volumes/nextcloud/data:/data
+      - /home/brent/nextcloud/config:/config
+      - /home/brent/nextcloud/data:/data
     ports:
       - 9443:443
     restart: unless-stopped

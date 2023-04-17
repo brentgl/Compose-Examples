@@ -18,7 +18,7 @@ services:
       - WEBSOCKET_ENABLED=true
       - ROCKET_ENV=prod
       - ROCKET_WORKERS=10
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
       - LOG_LEVEL=error
       - EXTENDED_LOGGING=true
     hostname: vaultwarden
@@ -37,8 +37,8 @@ services:
     #  - traefik.http.services.vaultwarden-ws.loadbalancer.server.port=3012
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/vaultwarden/data:/data
-      - /mnt/docker-volumes/vaultwarden/logs:/data/logs
+      - /home/brent/vaultwarden/data:/data
+      - /home/brent/vaultwarden/logs:/data/logs
 
   # this service will backup your vaultwarden instance corretly
   # see https://github.com/Bruceforce/vaultwarden-backup for more information
@@ -53,8 +53,8 @@ services:
     #labels:
     #  com.centurylinklabs.watchtower.monitor-only: true
     volumes:
-      - /mnt/docker-volumes/vaultwarden/data:/data/
-      - /mnt/docker-volumes/vaultwarden/backup:/myBackup
+      - /home/brent/vaultwarden/data:/data/
+      - /home/brent/vaultwarden/backup:/myBackup
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     environment:
@@ -62,6 +62,6 @@ services:
       - DELETE_AFTER=30
       - UID=0
       - GID=1000
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
       - BACKUP_DIR=/myBackup
       - CRON_TIME=50 3 * * * # see https://crontab.guru/

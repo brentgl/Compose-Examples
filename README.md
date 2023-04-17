@@ -20,7 +20,7 @@
 - Docker Compose
 
 ## 🎓 Usage
-- Volume bind mounts are assumed to be located at `/mnt/docker-volumes/<container-name>/`
+- Volume bind mounts are assumed to be located at `/home/brent/<container-name>/`
 - Volume permissions (UID:GUID) must be set correctly by yourself. Usually `1000:1000` - otherwise read the notes!
 - Docker networks are not pre-defined. Adjust to your preference and network/proxy setup.
 - Example config files are usually provided but not yet located in the correct volume bind mount paths. Adjust!

@@ -8,8 +8,8 @@ You have to place the `/app/` and `/public/` directories at your Docker bind vol
 
 ````
 git clone https://github.com/miroslavpejic85/mirotalk
-cp -R mirotalk/app/ /mnt/docker-volumes/mirotalk/app
-cp -R mirotalk/public/ /mnt/docker-volumes/mirotalk/public
+cp -R mirotalk/app/ /home/brent/mirotalk/app
+cp -R mirotalk/public/ /home/brent/mirotalk/public
 rm -rf mirotalk
 
 # may move the .env too and adjust compose file

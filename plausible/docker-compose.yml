@@ -11,7 +11,7 @@ services:
     restart: always
     container_name: plausible-db
     volumes:
-      - /mnt/docker-volumes/plausible/database/:/var/lib/postgresql/data
+      - /home/brent/plausible/database/:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
 
@@ -20,9 +20,9 @@ services:
     image: clickhouse/clickhouse-server:22.6-alpine
     restart: always
     volumes:
-      - /mnt/docker-volumes/plausible/event-data:/var/lib/clickhouse
-      - /mnt/docker-volumes/plausible/clickhouse/clickhouse-config.xml:/etc/clickhouse-server/config.d/logging.xml:ro
-      - /mnt/docker-volumes/plausible/clickhouse/clickhouse-user-config.xml:/etc/clickhouse-server/users.d/logging.xml:ro
+      - /home/brent/plausible/event-data:/var/lib/clickhouse
+      - /home/brent/plausible/clickhouse/clickhouse-config.xml:/etc/clickhouse-server/config.d/logging.xml:ro
+      - /home/brent/plausible/clickhouse/clickhouse-user-config.xml:/etc/clickhouse-server/users.d/logging.xml:ro
     ulimits:
       nofile:
         soft: 262144

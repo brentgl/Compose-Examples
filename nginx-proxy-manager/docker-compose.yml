@@ -4,7 +4,7 @@ services:
   npm:
     container_name: npm
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     hostname: npm
     user: 0:1000
     networks:
@@ -20,8 +20,8 @@ services:
       interval: 30s
       timeout: 3s
     volumes:
-      - /mnt/docker-volumes/nginx-proxy-manager/data:/data
-      - /mnt/docker-volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+      - /home/brent/nginx-proxy-manager/data:/data
+      - /home/brent/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
 
 networks:
   npm_proxy:

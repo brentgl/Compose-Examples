@@ -7,4 +7,4 @@ services:
       - '9080:80'
     restart: unless-stopped
     volumes:
-      - /mnt/docker-volumes/answer/data:/data
+      - /home/brent/answer/data:/data

@@ -8,9 +8,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin
+      - TZ=Europe/Paris
     volumes:
-      - /mnt/docker-volumes/homeassistant/config:/config
+      - /home/brent/homeassistant/config:/config
     #ports:
     #  - 8123:8123 #optional
     #devices:

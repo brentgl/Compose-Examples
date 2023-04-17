@@ -12,7 +12,7 @@ services:
       - 1.1.1.1
       - 8.8.8.8
     volumes:
-      - /mnt/docker-volumes/uptimekuma:/app/data
+      - /home/brent/uptimekuma:/app/data
     labels:
       - traefik.enable=true
       - traefik.http.routers.uptimekuma.rule=Host(`uptimekuma.example.com`)
